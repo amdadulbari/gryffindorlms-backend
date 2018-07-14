@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/LMS?useSSL=false</property>
+        <property name="hibernate.connection.username">imad</property>
+        <property name="hibernate.connection.password">#imad#imad#</property>
+        <property name="hibernate.connection.pool_size">5</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <mapping class="com.gryffindor.lms.models.Classroom"></mapping>
+        <mapping class="com.gryffindor.lms.models.User"></mapping>
+        <mapping class="com.gryffindor.lms.models.PendingUser"></mapping>
+        <mapping class="com.gryffindor.lms.models.EnrolledClass"></mapping>
+    </session-factory>
+</hibernate-configuration>
